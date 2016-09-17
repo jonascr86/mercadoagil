@@ -26,8 +26,7 @@ Route::post('forgot-password', ['as' => 'forgot-password', 'uses' => 'AuthContro
 Route::get('forgot-password/{userId}/{passwordResetCode}', ['as' => 'forgot-password-confirm', 'uses' => 'AuthController@getForgotPasswordConfirm']);
 Route::post('forgot-password/{userId}/{passwordResetCode}', 'AuthController@postForgotPasswordConfirm');
 
-
-Route::get('/', ['as' => 'home', 'uses' => 'Home@index']);
+Route::get('/', ['as' => 'site.home', 'uses' => 'Site\HomeController@index']);
 
 Route::group(['middleware' => 'SentinelAdmin'], function () {
 
