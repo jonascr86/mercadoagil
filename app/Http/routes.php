@@ -26,10 +26,10 @@ Route::post('forgot-password', ['as' => 'forgot-password', 'uses' => 'AuthContro
 Route::get('forgot-password/{userId}/{passwordResetCode}', ['as' => 'forgot-password-confirm', 'uses' => 'AuthController@getForgotPasswordConfirm']);
 Route::post('forgot-password/{userId}/{passwordResetCode}', 'AuthController@postForgotPasswordConfirm');
 
-Route::group(['middleware' => 'SentinelAdmin'], function () {
 
-    # Dashboard
-    Route::get('/', ['as' => 'dashboard', 'uses' => 'ChandraController@showHome']);
+Route::get('/', ['as' => 'home', 'uses' => 'Home@index']);
+
+Route::group(['middleware' => 'SentinelAdmin'], function () {
 
     # User Management
     # TODO: Apply RESTful
