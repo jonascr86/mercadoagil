@@ -10,4 +10,9 @@ class Endereco extends Model
     {
         return $this->belongsTo(Cidade::class);
     }
+
+    public function users()
+    {
+        return $this->belongsToMany(Users::class, 'enderecos_do_usuarios');
+    }
 }

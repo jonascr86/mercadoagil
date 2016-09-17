@@ -39,4 +39,8 @@ class User extends EloquentUser
         'youtube',
     ];
 
+    public function enderecos()
+    {
+        return $this->belongsToMany(Endereco::class, 'enderecos_do_usuarios');
+    }
 }
