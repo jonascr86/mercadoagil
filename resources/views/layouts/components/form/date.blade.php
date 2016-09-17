@@ -1,0 +1,1 @@
+@include('layouts.components.form._input-group-addon', ['input' =>  Form::text($name, $value, array_merge(['class' => 'form-control', 'data-mask', 'data-inputmask' => "'alias': 'dd/mm/yyyy'"], $attributes)), 'icon' => 'fa fa-fw fa-calendar'])
