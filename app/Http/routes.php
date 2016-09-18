@@ -27,6 +27,8 @@ Route::get('forgot-password/{userId}/{passwordResetCode}', ['as' => 'forgot-pass
 Route::post('forgot-password/{userId}/{passwordResetCode}', 'AuthController@postForgotPasswordConfirm');
 
 Route::get('/', ['as' => 'site.home', 'uses' => 'Site\HomeController@index']);
+Route::get('itens', ['as' => 'site.itens', 'uses' => 'Site\HomeController@itens']);
+Route::get('produtosimples', ['as' => 'site.produtosimples', 'uses' => 'Site\HomeController@produtoSimples']);
 
 Route::group(['middleware' => 'SentinelAdmin'], function () {
 
@@ -100,3 +102,23 @@ Route::group(['middleware' => 'SentinelUser'], function () {
         //});
     });
 });
+
+
+
+//mercado Resources
+/********************* mercado ***********************************************/
+Route::resource('mercado','\App\Http\Controllers\MercadoController');
+Route::post('mercado/{id}/update','\App\Http\Controllers\MercadoController@update');
+Route::get('mercado/{id}/delete','\App\Http\Controllers\MercadoController@destroy');
+Route::get('mercado/{id}/deleteMsg','\App\Http\Controllers\MercadoController@DeleteMsg');
+/********************* mercado ***********************************************/
+
+
+//pedido Resources
+/********************* pedido ***********************************************/
+Route::resource('pedido','\App\Http\Controllers\PedidoController');
+Route::post('pedido/{id}/update','\App\Http\Controllers\PedidoController@update');
+Route::get('pedido/{id}/delete','\App\Http\Controllers\PedidoController@destroy');
+Route::get('pedido/{id}/deleteMsg','\App\Http\Controllers\PedidoController@DeleteMsg');
+/********************* pedido ***********************************************/
+

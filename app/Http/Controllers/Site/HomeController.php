@@ -14,4 +14,14 @@ class HomeController extends Controller
 
         return view('site/home');
     }
+
+    public function itens()
+    {
+        return view('site/itens');
+    }
+
+    public function produtoSimples()
+    {
+        return view('site/produtosimples');
+    }
 }
