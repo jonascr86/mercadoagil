@@ -17,6 +17,7 @@ class CreateTableProdutos extends Migration
             $table->String('nome');
             $table->String('imagem');
             $table->double('preco');
+            $table->timestamps();
         });
     }
 
