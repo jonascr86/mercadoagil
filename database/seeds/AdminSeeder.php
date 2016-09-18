@@ -11,10 +11,10 @@ class AdminSeeder extends DatabaseSeeder {
 		DB::table('role_users')->truncate();
 
 		$jonas = Sentinel::registerAndActivate([
-			'email' => 'jonas@jonas.com',
+			'email' => 'michel@michel.com',
 			'password' => '123',
-			'first_name' => 'Jonas',
-			'last_name' => 'Correia'
+			'first_name' => 'Michel',
+			'last_name' => 'de Conto'
 		]);
 		
 
