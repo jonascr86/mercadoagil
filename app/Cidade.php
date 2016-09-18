@@ -20,4 +20,9 @@ class Cidade extends Model
     {
         return self::orderBy('nome')->get()->lists('local', 'id');
     }
+
+    public function enderecos()
+    {
+        return $this->hasMany(Endereco::class);
+    }
 }
