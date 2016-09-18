@@ -2,9 +2,8 @@
 
 namespace App\Http\Controllers\Site;
 
-use Illuminate\Http\Request;
+use App\Produto;
 use App\Http\Controllers\Controller;
-use App\Http\Requests;
 
 class HomeController extends Controller
 {
@@ -17,7 +16,8 @@ class HomeController extends Controller
 
     public function itens()
     {
-        return view('site/itens');
+        $produtos = Produto::all();
+        return view('site/itens', compact('produtos'));
     }
 
     public function produtoSimples()

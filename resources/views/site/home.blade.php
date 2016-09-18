@@ -57,36 +57,11 @@
         <div class="zigzag-bottom"></div>
         <div class="container">
             <div class="row">
-
-                <a href="{{route('site.itens')}}">
-                    <div class="col-md-3 col-sm-6">
-                        <div class="single-promo promo1">
-                            <i class="fa fa-refresh"></i>
-                            <p>STR - Lajeado</p>
-                        </div>
-                    </div>
-                </a>
                 <a href="{{route('site.itens')}}">
                     <div class="col-md-3 col-sm-6">
                         <div class="single-promo promo2">
                             <i class="fa fa-truck"></i>
-                            <p>IMEC - Lajeado</p>
-                        </div>
-                    </div>
-                </a>
-                <a href="{{route('site.itens')}}" style="">
-                    <div class="col-md-3 col-sm-6">
-                        <div class="single-promo promo3">
-                            <i class="fa fa-lock"></i>
-                            <p>Dália - Arroio do Meio</p>
-                        </div>
-                    </div>
-                </a>
-                <a href="{{route('site.itens')}}">
-                    <div class="col-md-3 col-sm-6">
-                        <div class="single-promo promo4">
-                            <i class="fa fa-gift"></i>
-                            <p>New products</p>
+                            <p>Mercado da Benjamin - Lajeado</p>
                         </div>
                     </div>
                 </a>

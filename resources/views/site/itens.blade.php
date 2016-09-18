@@ -1,5 +1,7 @@
 @extends('site.layout.master')
-
+<style>
+    .product-upper img {  width: 220px; height: 225px }
+</style>
 @section('body')
 <div class="header-area">
     <div class="container">
@@ -54,138 +56,27 @@
     <div class="zigzag-bottom"></div>
     <div class="container">
         <div class="row">
+            @foreach($produtos as $produto)
             <div class="col-md-3 col-sm-6">
                 <div class="single-shop-product">
                     <div class="product-upper">
-                        <img src="{{asset('assets/images/produtos/AcucarCristal5kg.png')}}" alt="">
+                        <img src="{{asset($produto->imagem)}}" alt="">
                     </div>
-                    <h2><a href="{{route('site.produtosimples')}}">Apple new mac book 2015 March :P</a></h2>
+                    <h2>{{$produto->nome}}</h2>
                     <div class="product-carousel-price">
-                        <ins>$899.00</ins> <del>$999.00</del>
+                        <label>Preço: R${{$produto->preco}}</label>
+                    </div>
+                    <div class="quantity">
+                        <label>Quantidade</label>
+                        <input type="number" size="4" class="input-text qty text" title="Qty" value="1" name="quantidade" min="1" step="1">
+                    </div>
+                    <div class="checkbox">
+                        <label><input type="checkbox" value=""></label>
+
                     </div>
                 </div>
             </div>
-            <div class="col-md-3 col-sm-6">
-                <div class="single-shop-product">
-                    <div class="product-upper">
-                        <img src="{{public_path("assets/images/produtos/AcucarCristal5kg.png")}}" alt="">
-                    </div>
-                    <h2><a href="">Apple new mac book 2015 March :P</a></h2>
-                    <div class="product-carousel-price">
-                        <ins>$899.00</ins> <del>$999.00</del>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3 col-sm-6">
-                <div class="single-shop-product">
-                    <div class="product-upper">
-                        <img src="img/product-3.jpg" alt="">
-                    </div>
-                    <h2><a href="">Apple new mac book 2015 March :P</a></h2>
-                    <div class="product-carousel-price">
-                        <ins>$899.00</ins> <del>$999.00</del>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3 col-sm-6">
-                <div class="single-shop-product">
-                    <div class="product-upper">
-                        <img src="img/product-4.jpg" alt="">
-                    </div>
-                    <h2><a href="">Apple new mac book 2015 March :P</a></h2>
-                    <div class="product-carousel-price">
-                        <ins>$899.00</ins> <del>$999.00</del>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3 col-sm-6">
-                <div class="single-shop-product">
-                    <div class="product-upper">
-                        <img src="img/product-2.jpg" alt="">
-                    </div>
-                    <h2><a href="">Apple new mac book 2015 March :P</a></h2>
-                    <div class="product-carousel-price">
-                        <ins>$899.00</ins> <del>$999.00</del>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3 col-sm-6">
-                <div class="single-shop-product">
-                    <div class="product-upper">
-                        <img src="img/product-1.jpg" alt="">
-                    </div>
-                    <h2><a href="">Apple new mac book 2015 March :P</a></h2>
-                    <div class="product-carousel-price">
-                        <ins>$899.00</ins> <del>$999.00</del>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3 col-sm-6">
-                <div class="single-shop-product">
-                    <div class="product-upper">
-                        <img src="img/product-3.jpg" alt="">
-                    </div>
-                    <h2><a href="">Apple new mac book 2015 March :P</a></h2>
-                    <div class="product-carousel-price">
-                        <ins>$899.00</ins> <del>$999.00</del>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3 col-sm-6">
-                <div class="single-shop-product">
-                    <div class="product-upper">
-                        <img src="img/product-4.jpg" alt="">
-                    </div>
-                    <h2><a href="">Apple new mac book 2015 March :P</a></h2>
-                    <div class="product-carousel-price">
-                        <ins>$899.00</ins> <del>$999.00</del>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3 col-sm-6">
-                <div class="single-shop-product">
-                    <div class="product-upper">
-                        <img src="img/product-2.jpg" alt="">
-                    </div>
-                    <h2><a href="">Apple new mac book 2015 March :P</a></h2>
-                    <div class="product-carousel-price">
-                        <ins>$899.00</ins> <del>$999.00</del>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3 col-sm-6">
-                <div class="single-shop-product">
-                    <div class="product-upper">
-                        <img src="img/product-1.jpg" alt="">
-                    </div>
-                    <h2><a href="">Apple new mac book 2015 March :P</a></h2>
-                    <div class="product-carousel-price">
-                        <ins>$899.00</ins> <del>$999.00</del>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3 col-sm-6">
-                <div class="single-shop-product">
-                    <div class="product-upper">
-                        <img src="img/product-3.jpg" alt="">
-                    </div>
-                    <h2><a href="">Apple new mac book 2015 March :P</a></h2>
-                    <div class="product-carousel-price">
-                        <ins>$899.00</ins> <del>$999.00</del>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3 col-sm-6">
-                <div class="single-shop-product">
-                    <div class="product-upper">
-                        <img src="img/product-4.jpg" alt="">
-                    </div>
-                    <h2><a href="">Apple new mac book 2015 March :P</a></h2>
-                    <div class="product-carousel-price">
-                        <ins>$899.00</ins> <del>$999.00</del>
-                    </div>
-                </div>
-            </div>
+            @endforeach
         </div>
     </div>
 </div>
