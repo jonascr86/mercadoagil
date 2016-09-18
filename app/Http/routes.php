@@ -28,6 +28,8 @@ Route::post('forgot-password/{userId}/{passwordResetCode}', 'AuthController@post
 
 Route::get('/', ['as' => 'site.home', 'uses' => 'Site\HomeController@index']);
 
+Route::get('/sendMail', 'EmailController@send');
+
 Route::group(['middleware' => 'SentinelAdmin'], function () {
 
     # User Management
