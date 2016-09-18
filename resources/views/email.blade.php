@@ -1,7 +1,11 @@
 <html>
     <head></head>
-    <body style="background: black; color: white">
-        <h1>{{$title}}</h1>
-        <p>{{$content}}</p>
+    <body>
+        <h1>Mercado Agil</h1>
+
+        <h2>
+           Pedido Efetuado pelo sistema:
+        </h2>
+
     </body>
 </html>

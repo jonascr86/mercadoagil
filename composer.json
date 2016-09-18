@@ -11,7 +11,8 @@
         "laravel/framework": "5.2.*",
         "barryvdh/laravel-debugbar": "^2.2",
         "Amranidev/scaffold-interface": "1.4.*",
-        "yajra/laravel-datatables-oracle": "~6.0"
+        "yajra/laravel-datatables-oracle": "~6.0",
+        "guzzlehttp/guzzle": "~5.3|~6.0"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
