@@ -1,6 +1,7 @@
 @extends('site.layout.master')
 
 @section('body')
+    <div style="min-height: 1000px">
     <div class="header-area">
         <div class="container">
             <div class="row">
@@ -43,8 +44,7 @@
                 </div>
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
-                        <li class="active"><a href="index.html">Selecione o mercado</a></li>
-                        <li><a href="#">Escolha seus produtos</a></li>
+                        <li class="active"><a href="{{route('site.home')}}">Selecione o mercado</a></li>
                     </ul>
                 </div>
             </div>
@@ -58,7 +58,7 @@
         <div class="container">
             <div class="row">
 
-                <a href="">
+                <a href="{{route('site.itens')}}">
                     <div class="col-md-3 col-sm-6">
                         <div class="single-promo promo1">
                             <i class="fa fa-refresh"></i>
@@ -66,7 +66,7 @@
                         </div>
                     </div>
                 </a>
-                <a href="">
+                <a href="{{route('site.itens')}}">
                     <div class="col-md-3 col-sm-6">
                         <div class="single-promo promo2">
                             <i class="fa fa-truck"></i>
@@ -74,7 +74,7 @@
                         </div>
                     </div>
                 </a>
-                <a href="" style="">
+                <a href="{{route('site.itens')}}" style="">
                     <div class="col-md-3 col-sm-6">
                         <div class="single-promo promo3">
                             <i class="fa fa-lock"></i>
@@ -82,7 +82,7 @@
                         </div>
                     </div>
                 </a>
-                <a href="">
+                <a href="{{route('site.itens')}}">
                     <div class="col-md-3 col-sm-6">
                         <div class="single-promo promo4">
                             <i class="fa fa-gift"></i>
@@ -93,6 +93,5 @@
             </div>
         </div>
     </div> <!-- End promo area -->
-
-
-    @stop
+    </div>
+@stop
